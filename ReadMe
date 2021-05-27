@@ -1,0 +1,8 @@
+To generate the file directly:
+    gcc -c main.c -o main.o
+    gcc -c dll.c -o dll.o
+    
+    gcc -g main.o dll.o -o exe        : To generate the exe file
+    ./exe                             : To execute the exe file
+    
+  
