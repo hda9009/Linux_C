@@ -1,8 +1,27 @@
 To generate the file directly:
-    gcc -c main.c -o main.o
-    gcc -c dll.c -o dll.o
+    gcc -g -c main.c -o main.o
+    gcc -g -c dll.c -o dll.o
     
     gcc -g main.o dll.o -o exe        : To generate the exe file
     ./exe                             : To execute the exe file
     
-  
+ 
+ 
+// ************** Static Library Creation ***************** //
+Text Substitution File:
+    gcc -c -E main.c -o main.i
+    
+   
+Assembly File:
+    gcc -c -S main.c -o main.s
+    
+Object File:
+    gcc -c main.s -o main.o
+    
+Linking Multiple Files:
+    ar rcs libmerge.a file1.o file2.o
+    
+Create executable File:
+    gcc main.o -o exe -L. libmerge.a
+    
+// ********************************************************** //
